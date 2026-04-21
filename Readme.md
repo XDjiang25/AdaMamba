@@ -18,7 +18,6 @@ AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting
 <div align="center">
     <a href="https://arxiv.org/abs/24xx.xxxxx"><img src="https://img.shields.io/badge/arXiv-TBD.svg"></a> &ensp;
     <a href="https://github.com/XDjiang25/AdaMamba"><img src="https://img.shields.io/static/v1?label=Project&message=Github&color=blue&logo=github"></a> &ensp;
-    <img src="https://img.shields.io/github/stars/XDjiang25/AdaMamba?style=flat&logo=github"> &ensp;
     
 </div>
 
