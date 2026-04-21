@@ -34,7 +34,7 @@ for batch_size in 24
 do
 for learning_rate in 0.0001
 do
-for patch_lens in "${patch_lens_list[@]}"  # 新增的 patch_lens 循环
+for patch_lens in "${patch_lens_list[@]}"  
 do
 
     
