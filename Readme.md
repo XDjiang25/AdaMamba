@@ -31,7 +31,7 @@ This is the official repository for **AdaMamba**, a novel framework that endogen
 ## :bulb: Motivation
 
 <div align="center">
-  <img src="assets/motivation.png" width="80%">
+  <img src="assets/Motivation.png" width="80%">
   <p align="justify" style="width: 80%; margin-top: 10px;">
     <strong>Figure 1:</strong> A motivating example of the ETTm1 dataset in both time and frequency domains. While "HULL" & "MULL", as well as "HUFL" & "MUFL", exhibit noticeable similarities in the time-domain, their frequency characteristics differ markedly, particularly in the gray-highlighted regions. (Left) Time domain: time-series variations over 200 time steps. (Right) Frequency domain: frequency discrepancies visualized via Power Spectral Density (PSD).
   </p>
