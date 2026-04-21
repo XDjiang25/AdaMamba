@@ -12,7 +12,7 @@ AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting
 <br>
 
 <div align="center">
-  <img src="assets/AdaMamba.png" width="95%" alt="AdaMamba framework">
+  <img src="assets/AdaMamba.png" width="100%" alt="AdaMamba framework">
 </div>
 
 <div align="center">
