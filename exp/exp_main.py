@@ -3,7 +3,7 @@ from exp.exp_basic import Exp_Basic
 from models import FRNet
 from models import AdaMamba
 from utils.tools import EarlyStopping, adjust_learning_rate, visual, test_params_flop
-# 调用工具类中的可视化函数
+
 from utils.tools import visualize_frequency_adaptation
 from utils.metrics import metric
 import seaborn as sns
@@ -26,11 +26,7 @@ warnings.filterwarnings('ignore')
 class Exp_Main(Exp_Basic):
     def __init__(self, args):
         super(Exp_Main, self).__init__(args)
-    # def _build_model(self):
-    #     model_dict = {
 
-    #         'FRNet':FRNet
-    #     }
 
     def _build_model(self):
         model_dict = {
@@ -238,54 +234,6 @@ class Exp_Main(Exp_Basic):
 
         return self.model
 
-    def show_heatmap(self, data):
-
-        sns.set_style('whitegrid')  
-        ax=plt.figure(figsize=(30, 30),dpi=100)
-        sns.heatmap(data, linewidths=0, square=True,linecolor='white',annot=False, cbar =False, cmap = 'Oranges')
-        plt.show()
-        plt.savefig('./attention.pdf')
-
-    def visualize_frequency_activation(self, A_tensor, omega_tensor, setting, batch_idx, dim_feq, folder_path):
-        """可视化单个序列的频率幅度 A 热力图。"""
-
-        attn_pink = LinearSegmentedColormap.from_list(
-            'attn_pink',
-            [
-                (0.0, '#ffffff'),  
-                (0.3, '#fde0ef'),  
-                (0.6, '#f768a1'), 
-                (1.0, '#7a0177')   
-            ]
-        )
-        
-        A = A_tensor.mean(dim=1).cpu().numpy() # [nsteps, dim_feq]
-        omega = omega_tensor.cpu().numpy()
-        nsteps = A.shape[0]
-        
-        plt.figure(figsize=(10, 8))
-        
-        # 绘制热力图
-        im = plt.imshow(A.T, aspect='auto', origin='lower', cmap=attn_pink, 
-                extent=[0, nsteps, 0, dim_feq], interpolation='none')
-        
-        cbar = plt.colorbar(im)
-        cbar.set_label(
-            'Frequency Amplitude A (Mean over Features)',
-            fontsize=25
-        )
-        cbar.ax.tick_params(labelsize=27)
-
-        ax = plt.gca()
-        step = max(1, dim_feq // 10) 
-        y_ticks = np.arange(0, dim_feq, step)
-       
-        ax.set_yticks(y_ticks + 0.5) # +0.5 放置在格子的中间
-        y_labels = [f'{omega[int(i)]:.2f}' for i in y_ticks]
-        ax.set_yticklabels(y_labels)
-        plt.tick_params(axis='both', labelsize=35)
-        plt.savefig(os.path.join(folder_path, f'{batch_idx}_A_heatmap.pdf'))
-        plt.close()
 
     def test(self, setting, test=0):
         test_data, test_loader = self._get_data(flag='test')
@@ -336,13 +284,6 @@ class Exp_Main(Exp_Basic):
                             outputs, outputs_phy, A_batch, omega_batch, omega_offsets_batch, g_batch = self.model(batch_x, return_A=True) 
                             print(f"[{i}] Extracting frequency analysis features for visualization...")
 
-                            A_sample = A_batch[0].detach().cpu().numpy() # [nsteps, dim, dim_feq]
-                            omega_offsets_sample = omega_offsets_batch[0].detach().cpu().numpy() # [dim_feq]
-                            g_sample = g_batch[0].detach().cpu().numpy() # [nsteps, dim, dim_feq]
-                            
-                            save_file = os.path.join(folder_path, f'{i}_frequency_analysis.pdf')
-                            visualize_frequency_adaptation(omega_offsets_sample, g_sample, A_sample, save_file)
-                            print(f"✅ Frequency analysis heatmap saved for Batch {i} at {save_file}")
                         else:
                             outputs, outputs_phy = self.model(batch_x, return_A=False)
                     else:
