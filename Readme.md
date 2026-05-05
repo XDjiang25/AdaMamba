@@ -64,13 +64,10 @@ bash scripts/AdaMamba_ETTm1.sh
 If you find this repo helpful, please cite our paper. 
 
 ```
-@misc{jiang2026adamambaadaptivefrequencygatedmamba,
-      title={AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting}, 
-      author={Xudong Jiang and Mingshan Loo and Hanchen Yang and Wengen Li and Mingrui Zhang and Yichao Zhang and Jihong Guan and Shuigeng Zhou},
-      year={2026},
-      eprint={2604.23239},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2604.23239}, 
+@article{jiang2026adamamba,
+  title={AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting},
+  author={Jiang, Xudong and Loo, Mingshan and Yang, Hanchen and Li, Wengen and Zhang, Mingrui and Zhang, Yichao and Guan, Jihong and Zhou, Shuigeng},
+  journal={arXiv preprint arXiv:2604.23239},
+  year={2026}
 }
 ```
