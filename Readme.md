@@ -3,10 +3,9 @@ AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting
 </h1>
 
 <div align="center">
-  Xudong Jiang<sup>1</sup>, Mingshan LOO<sup>1</sup>, Hanchen Yang<sup>1,2</sup>, Wengen Li<sup>1</sup>, Mingrui Zhang<sup>1</sup>, Yichao Zhang<sup>1</sup>, Jihong Guan<sup>1</sup>, Shuigeng Zhou<sup>3</sup><br>
+  Xudong Jiang<sup>1</sup>, Mingshan LOO<sup>1</sup>, Wengen Li<sup>1</sup>, Mingrui Zhang<sup>1</sup>, Jihong Guan<sup>1</sup>, Shuigeng Zhou<sup>3</sup><br>
   <sup>1</sup>Tongji University, Shanghai, China &emsp; 
-  <sup>2</sup> Hong Kong Polytechnic University, Hong Kong, China<br>
-  <sup>3</sup>Fudan University, Shanghai, China<br>
+  <sup>2</sup>Fudan University, Shanghai, China<br>
 </div>
 
 <br>
@@ -16,7 +15,7 @@ AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting
 </div>
 
 <div align="center">
-    <a href="https://arxiv.org/abs/2604.23239"><img src="https://img.shields.io/badge/arXiv-2604.23239-b31b1b.svg"></a> &ensp;
+    <a href="https://arxiv.org/abs/2604.23239v2"><img src="https://img.shields.io/badge/arXiv-2604.23239-b31b1b.svg"></a> &ensp;
     <a href="https://github.com/XDjiang25/AdaMamba"><img src="https://img.shields.io/static/v1?label=Project&message=Github&color=blue&logo=github"></a> &ensp;
     
 </div>
