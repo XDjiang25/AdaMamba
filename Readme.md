@@ -3,7 +3,7 @@ AdaMamba: Adaptive Frequency-Gated Mamba for Long-Term Time Series Forecasting
 </h1>
 
 <div align="center">
-  Xudong Jiang<sup>1</sup>, Mingshan LOO<sup>1</sup>, Wengen Li<sup>1</sup>, Mingrui Zhang<sup>1</sup>, Jihong Guan<sup>1</sup>, Shuigeng Zhou<sup>3</sup><br>
+  Xudong Jiang<sup>1</sup>, Mingshan LOO<sup>1</sup>, Wengen Li<sup>1</sup>, Mingrui Zhang<sup>1</sup>, Jihong Guan<sup>1</sup>, Shuigeng Zhou<sup>2</sup><br>
   <sup>1</sup>Tongji University, Shanghai, China &emsp; 
   <sup>2</sup>Fudan University, Shanghai, China<br>
 </div>
